@@ -1,9 +1,8 @@
 'use strict';
 
 
-!function($) {
-
-  let Motion = Foundation.Motion; // import { Motion } from "foundation.util.motion";
+import $ from 'jquery'
+import { Motion } from "./foundation.util.motion";
 
 const MutationObserver = (function () {
   var prefixes = ['WebKit', 'Moz', 'O', 'Ms', ''];
@@ -261,10 +260,8 @@ Triggers.init = function(Foundation, $) {
   Foundation.IHearYou = Triggers.Initializers.addGlobalListeners
 }
 
-Triggers.init(Foundation, $);
+export default Triggers;
 
-
-}(jQuery);
 
 // function domMutationObserver(debounce) {
 //   // !!! This is coming soon and needs more work; not active  !!! //
