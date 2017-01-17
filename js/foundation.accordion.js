@@ -1,9 +1,9 @@
 'use strict';
 
-!function($) {
-
-  let Keyboard    = Foundation.Keyboard; // import Keyboard from 'foundation.util.keyboard'
-  let GetYoDigits = Foundation.GetYoDigits; // import { GetYoDigits } from 'foundation.util.core'
+import $ from 'jquery';
+import Keyboard from './foundation.util.keyboard';
+import { GetYoDigits } from './foundation.util.core';
+import Plugin from './foundation.plugin';
 
 /**
  * Accordion module.
@@ -11,7 +11,7 @@
  * @requires foundation.util.keyboard
  */
 
-class Accordion {
+class Accordion extends Plugin {
   /**
    * Creates a new instance of an accordion.
    * @class
@@ -19,13 +19,12 @@ class Accordion {
    * @param {jQuery} element - jQuery object to make into an accordion.
    * @param {Object} options - a plain object with settings to override the default options.
    */
-  constructor(element, options) {
+  _setup(element, options) {
     this.$element = element;
     this.options = $.extend({}, Accordion.defaults, this.$element.data(), options);
 
     this._init();
 
-    Foundation.registerPlugin(this, 'Accordion');
     Keyboard.register('Accordion', {
       'ENTER': 'toggle',
       'SPACE': 'toggle',
@@ -191,11 +190,9 @@ class Accordion {
    * @fires Accordion#destroyed
    * @function
    */
-  destroy() {
+  _destroy() {
     this.$element.find('[data-tab-content]').stop(true).slideUp(0).css('display', '');
     this.$element.find('a').off('.zf.accordion');
-
-    Foundation.unregisterPlugin(this);
   }
 }
 
@@ -223,7 +220,4 @@ Accordion.defaults = {
   allowAllClosed: false
 };
 
-// Window exports
-Foundation.plugin(Accordion, 'Accordion');
-
-}(jQuery);
+export default Accordion;
