@@ -244,5 +244,4 @@ Magellan.defaults = {
   barOffset: 0
 }
 
-// Window exports
-Foundation.plugin(Magellan, 'Magellan');
+export default Magellan;
