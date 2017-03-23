@@ -110,17 +110,17 @@ description: Everything but.
   </li>
   <li class="accordion-item">
     <!-- The tab title needs role="tab", an href, a unique ID, and aria-controls. -->
-    <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">Accordion 1</a>
+    <a href="#panel2d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">Accordion 1</a>
     <!-- The content pane needs an ID that matches the above href, role="tabpanel", data-tab-content, and aria-labelledby. -->
-    <div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
+    <div id="panel2d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
       Panel 2. Lorem ipsum dolor
     </div>
   </li>
   <li class="accordion-item">
     <!-- The tab title needs role="tab", an href, a unique ID, and aria-controls. -->
-    <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">Accordion 1</a>
+    <a href="#panel3d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">Accordion 1</a>
     <!-- The content pane needs an ID that matches the above href, role="tabpanel", data-tab-content, and aria-labelledby. -->
-    <div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
+    <div id="panel3d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
       Panel 3. Lorem ipsum dolor
     </div>
   </li>
