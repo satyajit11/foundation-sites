@@ -4211,10 +4211,13 @@ a.thumbnail {
   padding: 0.5rem;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+  z-index: 1;}
   .top-bar,
   .top-bar ul {
-    background-color: #e6e6e6; }
+    background-color: #e6e6e6;
+    
+}
   .top-bar input {
     max-width: 200px;
     margin-right: 1rem; }
